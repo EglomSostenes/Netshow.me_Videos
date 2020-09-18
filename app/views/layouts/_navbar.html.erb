@@ -1,8 +1,9 @@
 <div class="row">
-    <div class="col-md-3">
-        <%#= image_tag('logo-principal.png', style: "width: 30%") %>
+    <div class="col-md-2">
+        <br>
+        <h2 style="color:blue">Netshow.me!</h2>
     </div>
-    <div class="col-md-9"> <br>
+    <div class="col-md-10"> <br>
         <form class="form-inline">
             <a class="btn btn-outline-info" href=<%=videos_path%> role="button">
                 All
@@ -13,7 +14,7 @@
                 </a>
             </div>
             <% if current_user %>
-                <div style="padding-left: 600px">
+                <div style="padding-left: 900px">
                     <%= link_to('', destroy_user_session_path, method: :delete, class: 'btn btn-danger fa fa-sign-out', title: "SAIR") %>
                 </div>
             <% end %>

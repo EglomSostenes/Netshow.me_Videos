@@ -7,7 +7,7 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     @q = Video.ransack(params[:q])
-    @videos = @q.result(distinct: true)
+    @videos = @q.result(distinct: true).order("score DESC").paginate(page: params[:page], per_page: 7)
   end
 
   def my_videos

@@ -22,7 +22,7 @@
     <tr>
       <th>Name</th>
       <th>Views</th>
-      <th colspan="1"></th>
+      <th>Play</th>
     </tr>
   </thead>
 
@@ -31,13 +31,16 @@
       <tr>
         <td><%= video.name %></td>
         <td><%= video.score %></td>
-        <td><%= link_to 'Play', play_video_path(video), class: '', title: "Play" %></td>
+        <td><%= link_to '', play_video_path(video), class: "fas fa-play-circle fa-2x", title: "Play" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+<%= will_paginate @videos %> <br>
+<%= page_entries_info @videos %>
 
 
 
