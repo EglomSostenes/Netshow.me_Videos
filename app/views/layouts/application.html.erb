@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NetshowVideo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="col-md-12" style="background-color: #ffffda;">
+      <%= render 'layouts/navbar' %>
+    </div>
+    <div class="col-md-12" style="background-color: white;">
+      <%= yield %>
+    <div>
+    <script src="https://kit.fontawesome.com/d196caa582.js" crossorigin="anonymous"></script>
+  </body>
+</html>
