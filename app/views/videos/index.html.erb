@@ -18,9 +18,9 @@
         <td><%= video.name %></td>
         <td><%= video.url %></td>
         <td><%= video.score %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', video %></td> <!-- Aqui abrirá o vídeo -->
+        <td><%= link_to 'Edit', edit_video_path(video) %></td> <!-- Não existirá essa ação -->
+        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td> <!-- Não existirá essa ação-->
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +29,14 @@
 <br>
 
 <%= link_to 'New Video', new_video_path %>
+
+<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+  <source src="https://lamberta.github.io/html5-animation/examples/ch04/assets/movieclip.mp4" type='video/mp4'>
+  <source src="https://lamberta.github.io/html5-animation/examples/ch04/assets/movieclip.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+
+
