@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 #Autenticação
 gem 'devise'
 
+#Buscas
+gem 'ransack'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
