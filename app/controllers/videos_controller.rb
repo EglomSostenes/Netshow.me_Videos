@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:show, :edit, :update, :destroy, :play]
   before_action :authorized?, only: [:edit, :destroy, :show]
 
   # GET /videos
@@ -16,6 +16,11 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+  end
+
+  def play
+    @video.score = @video.score + 1
+    @video.save
   end
 
   # GET /videos/new

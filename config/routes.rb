@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     collection do
       get :my_videos
     end
+
+    member do
+      get :play
+    end
   end
 
   root to: 'videos#my_videos'
