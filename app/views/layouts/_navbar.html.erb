@@ -1,23 +1,37 @@
-<div class="row">
-    <div class="col-md-2">
-        <br>
-        <h2 style="color:blue">Netshow.me!</h2>
-    </div>
-    <div class="col-md-10"> <br>
-        <form class="form-inline">
-            <a class="btn btn-outline-info" href=<%=videos_path%> role="button">
-                All
-            </a> 
-            <div style="padding-left: 10px;">
-                <a class="btn btn-outline-secondary" href=<%=my_videos_videos_path%> role="button">
-                    My Videos
-                </a>
-            </div>
-            <% if current_user %>
-                <div style="padding-left: 900px">
-                    <%= link_to('', destroy_user_session_path, method: :delete, class: 'btn btn-danger fa fa-sign-out', title: "SAIR") %>
-                </div>
-            <% end %>
-        </form>
-    </div>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #007fff;
+    }
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav-right {
+        float: right;
+    }
+</style>
+
+<div class="topnav">
+  <a href=<%=videos_path%>> ALL </a>
+  <a href= <%=my_videos_videos_path%> >My Videos</a>
+  <div class="topnav-right">
+    <%= link_to('Sign Out', destroy_user_session_path, method: :delete, title: "Logoff") %>
+  </div>
 </div>
