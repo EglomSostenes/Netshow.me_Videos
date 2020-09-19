@@ -17,7 +17,7 @@ class Video < ApplicationRecord
 
     def url_valid?
         if self.url
-            unless self.url.match(/^(ftp|http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix)
+            unless URI.regexp.match?(self.url)
                 errors.add(:url, {url: "URL inválida"})
             end
         end
