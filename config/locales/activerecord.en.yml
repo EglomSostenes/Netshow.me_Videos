@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      video:
+        one: Video
+        other: Videos
+    attributes:
+      video:
+        name: Name
+        url: URL
+        score: Views

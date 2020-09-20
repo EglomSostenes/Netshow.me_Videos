@@ -1,0 +1,33 @@
+pt-BR:
+  all: Todos
+  search: Buscar
+  my_videos: "Meus Videos"
+  play: "Reproduzir"
+  sign_out: "Sair"
+  actions:
+   show: Exibir
+   edit: Editar
+   destroy: Excluir
+   new: Novo
+   back: Voltar
+ 
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Alterar %{model}"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: "não é igual a %{attribute}"
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+    template:
+      body: 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: 'Não foi possível gravar %{model}: 1 erro'
+        other: 'Não foi possível gravar %{model}: %{count} erros.'
+ 
+  confirm: Você tem certeza?

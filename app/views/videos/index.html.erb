@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>ALL</h1> <br>
+<h1><%=t('all')%></h1> <br>
 
 <form>
   <div>
       <%= search_form_for @q, url: videos_path, remote: true do |f| %>
           <div class="col col-md-6" style="display: inline-block">
             <%= f.search_field :name_cont,  class: "form-control", 
-              placeholder: "Name",
-              title: "Name" %>
+              placeholder: @videos.human_attribute_name("name"),
+              title: @videos.human_attribute_name("name") %>
           </div>
           <div class="col col-md-3" style="display: inline-block">
-            <%= f.submit "Search", class: "btn btn-primary" %>
+            <%= f.submit t("search"), class: "btn btn-primary" %>
           </div> 
       <% end %>
   </div>
@@ -20,9 +20,9 @@
 <table class="table table-striped table-hover">
   <thead class="thead-light">
     <tr>
-      <th>Name</th>
-      <th>Views</th>
-      <th>Play</th>
+      <th><%=@videos.human_attribute_name("name")%></th>
+      <th><%=@videos.human_attribute_name("score")%></th>
+      <th><%= t("play") %></th>
     </tr>
   </thead>
 
@@ -31,7 +31,7 @@
       <tr>
         <td><%= video.name %></td>
         <td><%= video.score %></td>
-        <td><%= link_to '', play_video_path(video), class: "fas fa-play-circle fa-2x", title: "Play" %></td>
+        <td><%= link_to '', play_video_path(video), class: "fas fa-play-circle fa-2x", title: t("play") %></td>
       </tr>
     <% end %>
   </tbody>

@@ -11,7 +11,7 @@ class VideosController < ApplicationController
   end
 
   def my_videos
-    @videos = Video.where(user: current_user)
+    @videos = Video.where(user: current_user).order("score DESC").paginate(page: params[:page], per_page: 7)
   end
 
   # GET /videos/1

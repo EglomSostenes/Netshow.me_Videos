@@ -25,7 +25,7 @@
   </div>
 
   <div class="actions pull-right col-md-6">
-    <%= link_to 'My Videos', my_videos_videos_path, class: 'btn btn-default' %>
-    <%= form.submit "Submit"%>
+    <%= link_to t('my_videos'), my_videos_videos_path, class: 'btn btn-default' %>
+    <%= form.submit t('helpers.submit')%>
   </div>
 <% end %>

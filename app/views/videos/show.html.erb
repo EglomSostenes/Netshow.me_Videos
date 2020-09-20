@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= translate 'activerecord.attributes.video.name'%>:</strong>
   <%= @video.name %>
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong><%= translate 'activerecord.attributes.video.url'%>:</strong>
   <%= @video.url %>
 </p>
 
 <p>
-  <strong>Score:</strong>
+  <strong><%= translate 'activerecord.attributes.video.score'%>:</strong>
   <%= @video.score %>
 </p>
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'My Videos', my_videos_videos_path %>
+<%= link_to t('actions.edit'), edit_video_path(@video) %> |
+<%= link_to t('my_videos'), my_videos_videos_path %>
