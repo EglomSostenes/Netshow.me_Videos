@@ -5,13 +5,19 @@ en:
   my_videos: "My Videos"
   play: "Play"
   sign_out: "Sign Out"
+  update_fail: "Could not update"
+  create_fail: "Could not create"
+  update_ok: "Successfully updated"
+  create_ok: "Successfully created"
+  destroy_ok: "Sucessfully destroyed"
+  permited_not: "You are not allowed to perform this operation"
+  
   actions:
    show: Show
    edit: Edit
    destroy: Destroy
    new: New
-   back: Back
- 
+   back: Back 
   helpers:
     submit:
       create: "Create a %{model}"

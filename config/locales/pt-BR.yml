@@ -4,13 +4,19 @@ pt-BR:
   my_videos: "Meus Videos"
   play: "Reproduzir"
   sign_out: "Sair"
+  update_fail: "Não foi possível atualizar"
+  create_fail: "Não foi possível criar"
+  update_ok: "Alterado com sucesso"
+  create_ok: "Criado com sucesso"
+  destroy_ok: "Removido com sucesso"
+  permited_not: "Você não tem permissão para realizar esta operação"
   actions:
    show: Exibir
    edit: Editar
    destroy: Excluir
    new: Novo
    back: Voltar
- 
+  
   helpers:
     submit:
       create: "Criar %{model}"

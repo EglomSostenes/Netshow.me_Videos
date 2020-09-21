@@ -30,7 +30,7 @@ class VideosController < ApplicationController
     @video = current_user.videos.new(video_params)
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
+        format.html { redirect_to @video, notice: t('create_ok') }
       else
         format.html { render :new }
       end
@@ -40,7 +40,7 @@ class VideosController < ApplicationController
   def update
     respond_to do |format|
       if @video.update(video_params)
-        format.html { redirect_to @video, notice: 'Video was successfully updated.' }
+        format.html { redirect_to @video, notice: t('update_ok') }
       else
         format.html { render :edit }
       end
@@ -50,8 +50,7 @@ class VideosController < ApplicationController
   def destroy
     @video.destroy
     respond_to do |format|
-      format.html { redirect_to my_videos_videos_url, notice: 'Video was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to my_videos_videos_url, notice: t('destroy_ok') }
     end
   end
 
@@ -63,7 +62,7 @@ class VideosController < ApplicationController
 
   def authorized?
     unless @video.user == current_user
-      redirect_to videos_url, notice: "Você não tem permissão para alterar ou destruir este vídeo!"
+      redirect_to videos_url, alert: t('permited_not')
     end
   end
 
