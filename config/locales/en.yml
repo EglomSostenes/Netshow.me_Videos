@@ -11,7 +11,9 @@ en:
   create_ok: "Successfully created"
   destroy_ok: "Sucessfully destroyed"
   permited_not: "You are not allowed to perform this operation"
-  
+  not_save: "Could not be saved"
+  error: Error(s)
+
   actions:
    show: Show
    edit: Edit

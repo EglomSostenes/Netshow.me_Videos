@@ -10,6 +10,9 @@ pt-BR:
   create_ok: "Criado com sucesso"
   destroy_ok: "Removido com sucesso"
   permited_not: "Você não tem permissão para realizar esta operação"
+  not_save: "Não pode ser salvo"
+  error: "Erro(s)"
+
   actions:
    show: Exibir
    edit: Editar
